@@ -1,0 +1,24 @@
+<?php
+
+namespace App\Models\Ref;
+
+use App\Models\DaftarApi;
+use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Factories\HasFactory;
+
+class PerangkatDaerah extends Model
+{
+    use HasFactory;
+
+    protected $fillable = [
+        'nama',
+        'slug',
+        'url',
+    ];
+
+    public function daftarApis()
+    {
+        return $this->hasMany(DaftarApi::class);
+    }
+
+}
