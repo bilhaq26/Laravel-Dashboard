@@ -4,6 +4,7 @@ use Illuminate\Http\Request;
 use App\Http\Controllers\Api\Auth;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Api\Ref\JenisApi;
+use App\Http\Controllers\Api\Ref\PerangkatDaerah;
 use App\Http\Controllers\Api\User\UserController;
 
 // User
@@ -18,6 +19,12 @@ Route::get('/jenis-api', [JenisApi::class, 'index']);
 Route::post('/jenis-api', [JenisApi::class, 'store']);
 Route::post('/jenis-api/{id}', [JenisApi::class, 'update']);
 Route::delete('/jenis-api/{id}', [JenisApi::class, 'destroy']);
+
+// Perangkat Daerah
+Route::get('/perangkat-daerah', [PerangkatDaerah::class, 'index']);
+Route::post('/perangkat-daerah', [PerangkatDaerah::class, 'store']);
+Route::post('/perangkat-daerah/{id}', [PerangkatDaerah::class, 'update']);
+Route::delete('/perangkat-daerah/{id}', [PerangkatDaerah::class, 'destroy']);
 
 
 
