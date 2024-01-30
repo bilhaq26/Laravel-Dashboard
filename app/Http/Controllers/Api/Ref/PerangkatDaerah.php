@@ -50,8 +50,8 @@ class PerangkatDaerah extends Controller
                 ], 401);
             }else{
                 $validate = $request->validate([
-                    'nama' => 'required|unique:ref_perangkat_daerah,nama',
-                    'url' => 'required|unique:ref_perangkat_daerah,url|url',
+                    'nama' => 'required|unique:perangkat_daerahs,nama',
+                    'url' => 'required|unique:perangkat_daerahs,url|url',
                 ],[
                     'nama.required' => 'Nama tidak boleh kosong',
                     'nama.unique' => 'Nama sudah ada',
@@ -95,8 +95,8 @@ class PerangkatDaerah extends Controller
                 ], 401);
             }else{
                 $validate = $request->validate([
-                    'nama' => 'required|unique:ref_perangkat_daerah,nama,'.$id,
-                    'url' => 'required|unique:ref_perangkat_daerah,url,'.$id.'|url',
+                    'nama' => 'required|unique:perangkat_daerahs,nama,'.$id,
+                    'url' => 'required|unique:perangkat_daerahs,url,'.$id.'|url',
                 ],[
                     'nama.required' => 'Nama tidak boleh kosong',
                     'nama.unique' => 'Nama sudah ada',

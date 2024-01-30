@@ -10,6 +10,7 @@ class PerangkatDaerah extends Model
 {
     use HasFactory;
 
+    protected $table = 'perangkat_daerahs';
     protected $fillable = [
         'nama',
         'slug',
