@@ -15,9 +15,4 @@ class JenisApi extends Model
         'nama',
         'slug',
     ];
-
-    public function daftarApis()
-    {
-        return $this->hasMany(DaftarApi::class);
-    }
 }

@@ -10,21 +10,22 @@ class DaftarApi extends Model
     use HasFactory;
 
     protected $table = 'daftar_apis';
+    protected $with = ['JenisAPI', 'PerangkatDaerah'];
+
     protected $fillable = [
-        'nama',
-        'slug',
-        'url',
-        'jenis_api_id',
-        'perangkat_daerah_id',
+        'id_jenis_api',
+        'id_perangkat_daerah',
+        'endpoint',
     ];
 
-    public function jenisApi()
+    public function JenisAPI()
     {
-        return $this->belongsTo(Ref\JenisApi::class, 'jenis_api_id');
+        return $this->belongsTo('App\Models\Ref\JenisApi', 'id_jenis_api', 'id');
     }
 
-    public function perangkatDaerah()
+    public function PerangkatDaerah()
     {
-        return $this->belongsTo(Ref\PerangkatDaerah::class, 'perangkat_daerah_id');
+        return $this->belongsTo('App\Models\Ref\PerangkatDaerah', 'id_perangkat_daerah', 'id');
     }
+
 }

@@ -2,6 +2,7 @@
 
 use Illuminate\Http\Request;
 use App\Http\Controllers\Api\Auth;
+use App\Http\Controllers\Api\Ref\Api;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Api\Ref\JenisApi;
 use App\Http\Controllers\Api\Ref\PerangkatDaerah;
@@ -25,6 +26,12 @@ Route::get('/perangkat-daerah', [PerangkatDaerah::class, 'index']);
 Route::post('/perangkat-daerah', [PerangkatDaerah::class, 'store']);
 Route::post('/perangkat-daerah/{id}', [PerangkatDaerah::class, 'update']);
 Route::delete('/perangkat-daerah/{id}', [PerangkatDaerah::class, 'destroy']);
+
+// Daftar API
+Route::get('/daftar-api', [Api::class, 'index']);
+Route::post('/daftar-api', [Api::class, 'store']);
+Route::post('/daftar-api/{id}', [Api::class, 'update']);
+Route::delete('/daftar-api/{id}', [Api::class, 'destroy']);
 
 
 
