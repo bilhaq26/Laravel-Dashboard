@@ -13,9 +13,9 @@ return new class extends Migration
     {
         Schema::create('perangkat_daerahs', function (Blueprint $table) {
             $table->id();
-            $table->string('nama');
-            $table->string('slug');
-            $table->string('url');
+            $table->string('nama')->nullable();
+            $table->string('slug')->nullable();
+            $table->string('url')->nullable();
             $table->timestamps();
         });
     }

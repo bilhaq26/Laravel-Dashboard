@@ -95,8 +95,8 @@ class PerangkatDaerah extends Controller
                 ], 401);
             }else{
                 $validate = $request->validate([
-                    'nama' => 'required|unique:perangkat_daerahs,nama,'.$id,
-                    'url' => 'required|unique:perangkat_daerahs,url,'.$id.'|url',
+                    'nama' => 'nullable|unique:perangkat_daerahs,nama,'.$id,
+                    'url' => 'nullable|unique:perangkat_daerahs,url,'.$id.'|url',
                 ],[
                     'nama.required' => 'Nama tidak boleh kosong',
                     'nama.unique' => 'Nama sudah ada',
