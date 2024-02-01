@@ -26,7 +26,7 @@ class PerangkatDaerah extends Controller
                     ], 200);
                 }else{
                     // jika data tidak kosong
-                    $data = RefPerangkatDaerah::paginate(10);
+                    $data = RefPerangkatDaerah::all();
                     return response()->json([
                         'message' => 'Berhasil menampilkan data',
                         'data' => $data
