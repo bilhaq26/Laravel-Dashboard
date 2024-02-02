@@ -16,6 +16,7 @@ return new class extends Migration
             $table->foreignId('id_jenis_api')->nullable()->constrained('jenis_apis')->onDelete('cascade');
             $table->foreignId('id_perangkat_daerah')->nullable()->constrained('perangkat_daerahs')->onDelete('cascade');
             $table->string('endpoint')->nullable();
+            $table->string('api_key')->nullable();
             $table->timestamps();
         });
     }

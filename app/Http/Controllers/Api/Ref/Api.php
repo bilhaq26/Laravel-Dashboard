@@ -50,10 +50,12 @@ class Api extends Controller
                     'id_jenis_api' => 'required',
                     'id_perangkat_daerah' => 'required',
                     'endpoint' => 'required',
+                    'api_key' => 'nullable',
                 ],[
                     'id_jenis_api.required' => 'Jenis API tidak boleh kosong',
                     'id_perangkat_daerah.required' => 'Perangkat Daerah tidak boleh kosong',
                     'endpoint.required' => 'Endpoint tidak boleh kosong',
+                    'api_key.required' => 'API Key tidak boleh kosong',
                 ]);
 
                 if($validate->fails()){
@@ -67,6 +69,7 @@ class Api extends Controller
                 $data->id_jenis_api = $request->id_jenis_api;
                 $data->id_perangkat_daerah = $request->id_perangkat_daerah;
                 $data->endpoint = $request->endpoint;
+                $data->api_key = $request->api_key;
                 $data->save();
 
                 return response()->json([
@@ -93,6 +96,7 @@ class Api extends Controller
                 'id_jenis_api.required' => 'Jenis API tidak boleh kosong',
                 'id_perangkat_daerah.required' => 'Perangkat Daerah tidak boleh kosong',
                 'endpoint.required' => 'Endpoint tidak boleh kosong',
+                'api_key.required' => 'API Key tidak boleh kosong',
             ]);
 
             if($validate->fails()){
@@ -106,6 +110,7 @@ class Api extends Controller
             $data->id_jenis_api = $request->id_jenis_api;
             $data->id_perangkat_daerah = $request->id_perangkat_daerah;
             $data->endpoint = $request->endpoint;
+            $data->api_key = $request->api_key;
             $data->save();
 
             return response()->json([

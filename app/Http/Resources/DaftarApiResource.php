@@ -22,6 +22,7 @@ class DaftarApiResource extends JsonResource
             'perangkat_daerah' => $this->PerangkatDaerah->nama,
             'url' => $this->PerangkatDaerah->url,
             'endpoint' => $this->endpoint,
+            'api_key' => $this->api_key,
             // 'jenis_api' => $this->JenisAPI,
         ];
     }

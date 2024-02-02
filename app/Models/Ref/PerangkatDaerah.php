@@ -15,6 +15,7 @@ class PerangkatDaerah extends Model
         'nama',
         'slug',
         'url',
+        'api_key'
     ];
 
     public function daftarApis()
